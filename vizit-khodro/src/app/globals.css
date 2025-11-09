@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --background: #f5f7fa;
+  --foreground: #10141b;
+  --accent-gradient: radial-gradient(circle at top, rgba(28, 109, 208, 0.25), transparent 60%);
+}
+
+:root[class~="dark"] {
+  color-scheme: dark;
+  --background: #080b11;
+  --foreground: #f8fafc;
+  --accent-gradient: radial-gradient(circle at top, rgba(255, 107, 44, 0.18), transparent 60%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "ss01" on, "ss02" on;
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(255, 107, 44, 0.35);
+  color: #0f172a;
+}
+
+.pattern-grid {
+  background-image: url("data:image/svg+xml,%3Csvg width='160' height='160' viewBox='0 0 160 160' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 159H159V0' stroke='rgba(255,255,255,0.04)'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+  background-repeat: repeat;
+}
+
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
